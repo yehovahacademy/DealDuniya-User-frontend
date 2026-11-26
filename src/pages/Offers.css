@@ -1,0 +1,17 @@
+/* Offers — coming soon */
+.of{margin:32px 0 56px}
+.of-hero{position:relative;overflow:hidden;text-align:center;background:var(--pb);border-radius:28px;padding:64px 24px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.of-tag{width:72px;height:72px;border-radius:20px;background:var(--orange);color:var(--on-ac);display:grid;place-items:center;font-size:34px;font-weight:800;transform:rotate(-8deg);box-shadow:0 14px 30px -12px color-mix(in srgb,var(--ac) 70%,transparent);animation:of-float 3.2s ease-in-out infinite}
+.of-chip{background:var(--sf);color:var(--ac);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:6px 14px;margin-top:8px}
+.of-hero h1{font-size:clamp(30px,5vw,48px);letter-spacing:-1.5px;line-height:1.05}
+.of-hero p{color:var(--tx2);max-width:460px}
+.of-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.of-cta .btn{align-self:center}.of-cta .pill{padding:12px 22px;background:var(--sf)}
+.of-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.of-card{background:var(--sf);border:1px solid var(--bd);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:6px;opacity:.85}
+.of-card i{font-style:normal;font-size:24px;width:48px;height:48px;border-radius:14px;background:var(--sg);display:grid;place-items:center;margin-bottom:6px}
+.of-card span{color:var(--tx2)}
+@keyframes of-float{50%{transform:rotate(-8deg) translateY(-6px)}}
+@media(max-width:900px){.of-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.of-hero{padding:44px 18px}}
+@media(prefers-reduced-motion:reduce){.of-tag{animation:none}}
