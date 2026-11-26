@@ -3,6 +3,7 @@ import UserLayout from "./layouts/UserLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Products from "./pages/Products.jsx";
+import ProductDetails from "./pages/ProductDetails.jsx";
 import Welcome from "./pages/Welcome.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Offers from "./pages/Offers.jsx";
@@ -20,6 +21,7 @@ export default function App() {
       <Route element={<UserLayout />}>
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/offers" element={<Offers />} />

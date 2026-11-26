@@ -14,6 +14,7 @@ export function toUiProduct(p) {
     description: p.description,
     category: p.category?.name ? label(p.category.name) : "Other",
     image: images[0]?.imageUrl || "",
+    images: images.map((i) => i.imageUrl).filter(Boolean),
     price,
     mrp: p.compareAtPrice ? Number(p.compareAtPrice) : price,
     stock: p.stock,

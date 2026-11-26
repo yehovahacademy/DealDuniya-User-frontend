@@ -110,13 +110,13 @@ export default function Home() {
         {productsStatus === "loading" ? (
           <p className="empty">Loading products…</p>
         ) : productsStatus === "error" ? (
-          <p className="empty">Couldn't load products. Is the backend running on port 5000?</p>
+          <p className="empty">Couldn't load products. Please refresh in a moment.</p>
         ) : trending.length ? (
           <div className="grid">
             {trending.map((p) => <ProductCard key={p.id} product={p} tag="Trending" />)}
           </div>
         ) : (
-          <p className="empty">More products in this category are coming in the full build.</p>
+          <p className="empty">No products in this category yet.</p>
         )}
       </section>
 

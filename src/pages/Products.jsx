@@ -96,7 +96,7 @@ export default function Products() {
       {productsStatus === "loading" ? (
         <p className="empty">Loading products…</p>
       ) : productsStatus === "error" ? (
-        <p className="empty">Couldn't load products. Is the backend running on port 5000?</p>
+        <p className="empty">Couldn't load products. Please refresh in a moment.</p>
       ) : shown.length ? (
         <>
           <div className="grid">

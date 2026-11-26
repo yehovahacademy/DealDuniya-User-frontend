@@ -221,10 +221,8 @@ export function CartProvider({ children }) {
   const toggleWishlist = (id) =>
     setWishlist((w) => (w.includes(id) ? w.filter((x) => x !== id) : [...w, id]));
 
-  const viewProduct = (id) => {
-    setRecent((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8));
-    toast("Product page opens here in the full build");
-  };
+  const markViewed = useCallback((id) => setRecent((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8)), []);
+  const viewProduct = (id) => navigate(`/products/${id}`);
 
   const addRecentSearch = (s) => setRecentSearches((r) => [s, ...r.filter((x) => x !== s)].slice(0, 5));
 
@@ -236,7 +234,7 @@ export function CartProvider({ children }) {
     products, productsStatus, getProduct,
     cart, cartItems, cartCount, cartStatus, pending, reloadCart: loadCart, addToCart, buyNow, changeQty, removeFromCart, clearCart, orderPlaced,
     wishlist, toggleWishlist,
-    recent, clearRecent: () => setRecent([]), viewProduct,
+    recent, clearRecent: () => setRecent([]), viewProduct, markViewed,
     recentSearches, addRecentSearch,
     category, setCategory,
     drawer, openDrawer: setDrawer, closeDrawer: () => setDrawer(null),
