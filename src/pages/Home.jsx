@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard.jsx";
 import { useStore } from "../context/CartContext.jsx";
 import { BRANDS, discount, inr, tint } from "../data/products.js";
@@ -16,6 +16,7 @@ function useCountdown(seconds) {
 
 export default function Home() {
   const { products, productsStatus, getProduct, addToCart, viewProduct, comingSoon, category, setCategory, recent, clearRecent } = useStore();
+  const navigate = useNavigate();
   const timer = useCountdown(5 * 3600 + 42 * 60);
   const carRef = useRef();
   const trendRef = useRef();
@@ -72,7 +73,7 @@ export default function Home() {
           <div className="t" style={{ background: "var(--sf)" }}>
             <div><h3>DealDuniya Plus</h3><p>Free membership. Earn coins on every order.</p></div>
             <span className="em">🪙</span>
-            <button className="arr" onClick={() => comingSoon("Plus")}>↗</button>
+            <button className="arr" onClick={() => navigate("/plus")} aria-label="DealDuniya Plus">↗</button>
           </div>
         </div>
       </div>
