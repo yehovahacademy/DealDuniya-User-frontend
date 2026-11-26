@@ -8,6 +8,7 @@ import Welcome from "./pages/Welcome.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Offers from "./pages/Offers.jsx";
 import Plus from "./pages/Plus.jsx";
+import Minutes from "./pages/Minutes.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/plus" element={<Plus />} />
+        <Route path="/minutes" element={<Minutes />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Route>
     </Routes>

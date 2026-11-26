@@ -65,7 +65,7 @@ export default function Home() {
           )}
         </div>
         <div className="bt">
-          <div className="t photo" onClick={() => comingSoon("Minutes")}>
+          <div className="t photo" onClick={() => navigate("/minutes")}>
             <img src="/images/minutes.jpg" alt="" />
             <div><h3>Minutes</h3><p>Groceries and essentials in 10 minutes.</p></div>
             <button className="arr">↗</button>
